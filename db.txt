@@ -1,0 +1,36 @@
+-- Creazione del database
+CREATE DATABASE IF NOT EXISTS car_db;
+USE car_db;
+
+-- Creazione della tabella "cars"
+CREATE TABLE IF NOT EXISTS cars (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    brand VARCHAR(50) NOT NULL,
+    model VARCHAR(50) NOT NULL,
+    year INT NOT NULL,
+    color VARCHAR(20) NOT NULL,
+    fuel_type VARCHAR(20) NOT NULL,
+    mileage INT NOT NULL,
+    transmission VARCHAR(20) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    seating_capacity INT NOT NULL,
+    horsepower INT NOT NULL,
+    engine_displacement DECIMAL(4, 2) NOT NULL,
+    acceleration DECIMAL(4, 2) NOT NULL,
+    top_speed INT NOT NULL,
+    weight DECIMAL(6, 2) NOT NULL,
+    length DECIMAL(6, 2) NOT NULL,
+    width DECIMAL(6, 2) NOT NULL,
+    height DECIMAL(6, 2) NOT NULL,
+    fuel_efficiency_city DECIMAL(4, 2) NOT NULL,
+    fuel_efficiency_highway DECIMAL(4, 2) NOT NULL
+);
+
+
+-- Inserimento di dati di esempio nella tabella "cars"
+INSERT INTO cars (brand, model, year, color, fuel_type, mileage, transmission, price, seating_capacity, horsepower, engine_displacement, acceleration, top_speed, weight, length, width, height, fuel_efficiency_city, fuel_efficiency_highway) VALUES
+    ('Toyota', 'Corolla', 2020, 'Blue', 'Gasoline', 15000, 'Automatic', 18000.00, 5, 140, 1.8, 9.2, 200, 1200.50, 4600, 177.50, 69.80, 57.30, 8.50, 6.40),
+    ('Honda', 'Civic', 2019, 'Black', 'Gasoline', 20000, 'Manual', 15000.00, 5, 158, 2.0, 8.5, 195, 1180.25, 4545, 176.20, 70.50, 56.80, 9.20, 6.80),
+    ('Ford', 'Mustang', 2021, 'Red', 'Gasoline', 1000, 'Automatic', 35000.00, 4, 450, 5.0, 4.5, 280, 1350.75, 4780, 188.60, 75.40, 54.10, 7.00, 5.60),
+    ('Chevrolet', 'Camaro', 2018, 'Yellow', 'Gasoline', 30000, 'Manual', 25000.00, 4, 335, 3.6, 5.2, 270, 1400.00, 4785, 190.20, 75.50, 51.80, 8.20, 6.00),
+    ('BMW', '3 Series', 2022, 'White', 'Gasoline', 5000, 'Automatic', 40000.00, 5, 255, 2.0, 6.1, 235, 1420.
